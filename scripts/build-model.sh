@@ -1,6 +1,15 @@
-#!/bin/bash
-DIR=`pwd`
-echo $DIR
+#!/bin/sh
 
-cd /Users/mircea/Research/external\ tools/inFusion727/tools/inFusion/
-./java2mse.sh $DIR/.. famix30 $DIR/../models/$1
+if [ $# -ne 2 ]
+then
+	echo "Usage: `basename $0` <famix21|famix30> <filename.mse> " >&2  # Error message >stderr.
+	exit $E_WRONGARGS
+fi  
+
+DIR=`pwd`
+INFDIR=/Users/mircea/Research/externaltools/inFusion727/tools/inFusion/
+
+echo $INFDIR
+cd $INFDIR 
+./java2mse.sh $DIR/.. $1 $DIR/../models/$2
+cd $DIR
