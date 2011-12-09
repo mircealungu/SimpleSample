@@ -25,6 +25,7 @@ public class InformaticsPHD extends Human{
 	{
 		laptop = new Laptop();
 		stamina = 1000;
+		doSomeWork();
 	}
 	
 	public void speakYourMind()
@@ -35,7 +36,7 @@ public class InformaticsPHD extends Human{
 		}
 		else
 		{
-			System.out.println("[iPhD] I want to die");
+			System.out.println("[iPhD] I want to sleep");
 		}
 	}
 	public void doSomeWork()
