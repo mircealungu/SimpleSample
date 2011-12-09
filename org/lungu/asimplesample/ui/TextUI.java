@@ -6,6 +6,7 @@
  */
 package org.lungu.asimplesample.ui;
 
+import org.lungu.asimplesample.model.ModelFacade;
 import org.lungu.asimplesample.model.beings.*;
 import org.lungu.asimplesample.util.PatentGenerator;
 
@@ -18,8 +19,8 @@ import org.lungu.asimplesample.util.PatentGenerator;
 public class TextUI {
 
 	public static void main(String[] args) {
-		InformaticsPHD phd = new InformaticsPHD();
-		Animal vivi = new Dog();
+		InformaticsPHD phd = ModelFacade.createInformaticsPHD();
+		Animal vivi = ModelFacade.createDog();
 		PatentGenerator gen = new PatentGenerator();
 		
 		phd.doSomeWork();
