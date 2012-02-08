@@ -52,6 +52,6 @@ public class InformaticsPHD extends Human{
 
 	public void generatePatent(PatentGenerator gen) {
 		stamina -= 10;
-		
+		System.out.println(gen.getPatentText());
 	}
 }
